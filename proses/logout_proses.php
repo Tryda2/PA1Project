@@ -1,0 +1,11 @@
+<?php 
+	session_start();
+	include_once('functions.php');
+	if(isset($_SESSION['is_logged_in'])){
+	destroy_session('is_logged_in');
+	}
+	elseif(isset($_SESSION['admin'])){
+		destroy_session('admin');
+	}
+	redirect('../index.php');
+ ?>
